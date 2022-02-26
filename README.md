@@ -4,4 +4,4 @@ A small website powered by College-Football-Data-API where you can explore colle
 
 ### Website
 
-[tbd]
+[cbteams.heroku.com](https://cfbteams.herokuapp.com/)
