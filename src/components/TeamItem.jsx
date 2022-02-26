@@ -3,7 +3,7 @@ import { Chip } from "./Chip";
 
 export const TeamItem = (props) => {
   return (
-    <div className="group flex items-center max-w-md m-5 rounded-full px-5 cursor-pointer zoom-out">
+    <div className="group flex items-center max-w-md m-5 rounded-full px-1 lg:px-5 cursor-pointer zoom-out">
       <img
         loading="lazy"
         src={props.teamDetails.logos[0]}

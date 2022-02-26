@@ -27,7 +27,7 @@ export const Navbar = (props) => {
             <input
               value={props.searchValue}
               onChange={props.onChange}
-              className="outline-none w-72 mx-5"
+              className="outline-none w-24 md:w-72 mx-5"
               type="text"
               placeholder="Search..."
             />

@@ -60,7 +60,7 @@ const App = () => {
           onChange={handleSearchChange}
           onSubmit={handleSubmit}
         />
-        <section className="p-10 h-full">
+        <section className="p-2 md:p-10 h-full">
           <Switcher
             conferences={conferences}
             handleSwitch={(position) => {
