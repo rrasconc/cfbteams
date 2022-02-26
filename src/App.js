@@ -53,36 +53,58 @@ const App = () => {
   }, []);
 
   return (
-    <main className="text-gray-800 text-sm h-full">
-      <Navbar
-        searchValue={searchValue}
-        onChange={handleSearchChange}
-        onSubmit={handleSubmit}
-      />
-      <section className="p-10 h-full">
-        <Switcher
-          conferences={conferences}
-          handleSwitch={(position) => {
-            let current = conferences[position].abbreviation;
-            setCurrentConfe(current);
-            fetchTeams(current);
-          }}
+    <>
+      <main className="text-gray-800 text-sm h-full min-h-screen">
+        <Navbar
+          searchValue={searchValue}
+          onChange={handleSearchChange}
+          onSubmit={handleSubmit}
         />
-        {isLoading ? (
-          <Loader className="mt-32" />
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {teams.map((item) => (
-              <TeamItem
-                teamDetails={item}
-                conference={currentConfe}
-                key={item.id}
-              />
-            ))}
-          </div>
-        )}
-      </section>
-    </main>
+        <section className="p-10 h-full">
+          <Switcher
+            conferences={conferences}
+            handleSwitch={(position) => {
+              let current = conferences[position].abbreviation;
+              setCurrentConfe(current);
+              fetchTeams(current);
+            }}
+          />
+          {isLoading ? (
+            <Loader className="mt-32" />
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              {teams.map((item) => (
+                <TeamItem
+                  teamDetails={item}
+                  conference={currentConfe}
+                  key={item.id}
+                />
+              ))}
+            </div>
+          )}
+        </section>
+      </main>
+      <footer className="bg-blue-50 w-full h-20 flex items-center justify-center bottom-0 relative space-x-10">
+        <a
+          href="https://www.github.com/rigobertorascon"
+          className="hover:scale-110"
+        >
+          About
+        </a>
+        <a
+          href="https://www.github.com/rigobertorascon"
+          className="hover:scale-110"
+        >
+          Github
+        </a>
+        <a
+          href="https://www.instagram.com/rigobertorascon/"
+          className="hover:scale-110"
+        >
+          Instagram
+        </a>
+      </footer>
+    </>
   );
 };
 
