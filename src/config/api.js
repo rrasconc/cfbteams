@@ -1,1 +1,1 @@
-export const baseURL = "http://localhost:3001/api/";
+export const baseURL = "https://cfbteams-proxy.herokuapp.com/api/";
